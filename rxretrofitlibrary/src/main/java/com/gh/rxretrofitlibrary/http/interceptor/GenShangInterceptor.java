@@ -38,6 +38,7 @@ public class GenShangInterceptor implements Interceptor {
         //分开键和值
         for (String param : params) {
             String[] keyvalue = param.split("=");
+            //如果有键无值则添加值为""
             if (keyvalue.length == 1) {
                 String key = keyvalue[0];
                 keyvalue = new String[]{key, ""};
